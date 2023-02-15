@@ -5,17 +5,6 @@ variable "aws_region" {
   default     = "us-west-1"
 }
 
-variable "aws_profile" {
-  description = "AWS profile"
-  type        = string
-  default     = "default"
-}
-variable "aws_config_file" {
-  description = "AWS config file"
-  type        = list(any)
-  default     = ["~/.aws/config"]
-}
-
 # List of variables that the user would need to change
 
 # Port: 9092, or the port that you are using in case it is not 9092 (e.g. 9094 for TLS or 9096 for SASL).
