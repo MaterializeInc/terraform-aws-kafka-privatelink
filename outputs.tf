@@ -28,3 +28,13 @@ output "mz_kafka_endpoint_sql" {
     );
     EOF
 }
+
+# Return the VPC endpoint service name
+output "mz_kafka_lb_endpoint_service" {
+  value = aws_vpc_endpoint_service.mz_kafka_lb_endpoint_service
+}
+
+# Return the AZs for the Kafka subnets in an array
+output "mz_kafka_azs" {
+  value = [for s in data.aws_subnet.mz_kafka_subnet : s.availability_zone_id]
+}

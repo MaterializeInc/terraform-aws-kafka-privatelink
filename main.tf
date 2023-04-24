@@ -47,8 +47,3 @@ resource "aws_vpc_endpoint_service" "mz_kafka_lb_endpoint_service" {
     Name = "mz-kafka-lb-endpoint-service"
   }
 }
-
-# Return the VPC endpoint service name
-output "mz_kafka_lb_endpoint_service_name" {
-  value = aws_vpc_endpoint_service.mz_kafka_lb_endpoint_service.service_name
-}
