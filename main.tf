@@ -41,7 +41,7 @@ resource "aws_lb_listener" "mz_kafka_listener" {
 
 # Create VPC endpoint service for the Load Balancer
 resource "aws_vpc_endpoint_service" "mz_kafka_lb_endpoint_service" {
-  acceptance_required        = true
+  acceptance_required        = var.mz_acceptance_required
   network_load_balancer_arns = [aws_lb.mz_kafka_lb.arn]
   tags = {
     Name = "mz-kafka-lb-endpoint-service"
