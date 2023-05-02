@@ -33,3 +33,10 @@ variable "mz_kafka_brokers" {
   #   }
   # ]
 }
+
+# Endpoint Service Acceptance Required (true/false)
+variable "mz_acceptance_required" {
+  description = "Endpoint Service Manual Acceptance Required (true/false)"
+  default     = false
+  type        = bool
+}
