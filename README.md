@@ -25,6 +25,7 @@ To override the default AWS provider variables, you can export the following env
 ```bash
 export AWS_PROFILE=<your_aws_profile> # eg. default
 export AWS_CONFIG_FILE=<your_aws_config_file> # eg. ["~/.aws/config"]
+export AWS_REGION=<your_aws_region> # eg. us-east-1
 ```
 
 ## Usage
@@ -137,4 +138,3 @@ After the connection request has been approved, you can create a Kafka source in
 ## Materialize Documentation
 
 You can also follow the [Materialize documentation](https://materialize.com/docs/ops/network-security/privatelink/) for more information.
-

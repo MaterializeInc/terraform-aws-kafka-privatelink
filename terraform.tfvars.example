@@ -1,8 +1,5 @@
-# Provider environment variables
-aws_region = "us-east-1"
-
 # Port: 9092, or the port that you are using in case it is not 9092 (e.g. 9094 for TLS or 9096 for SASL).
-mz_kafka_cluster_port = "9092"
+mz_kafka_cluster_port = 9092
 # The VPC ID of the existing Kafka cluster
 mz_kafka_vpc_id = ""
 
