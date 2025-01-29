@@ -1,10 +1,11 @@
-# Provider environment variables
-aws_region = "us-east-1"
-
 # Port: 9092, or the port that you are using in case it is not 9092 (e.g. 9094 for TLS or 9096 for SASL).
-mz_kafka_cluster_port = "9092"
+mz_kafka_cluster_port = 9092
 # The VPC ID of the existing Kafka cluster
 mz_kafka_vpc_id = ""
 
 # The list of all brokers in the existing Kafka cluster and their respective subnets
 mz_kafka_brokers = [{"broker_id" = 1, "broker_ip" = "BROKER_1_IP_HERE", "subnet_id" = "subnet-1234567890abcdef"}, {"broker_id" = 2, "broker_ip" = "BROKER_2_IP_HERE", "subnet_id" = "subnet-fedcba0987654321"}]
+
+# For cross-region access, add the regions to the list where you want to connect to your Kafka cluster from.
+# For example, the region where your Materialize environment is deployed.
+mz_supported_regions = []

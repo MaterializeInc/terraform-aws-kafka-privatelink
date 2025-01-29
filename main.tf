@@ -43,6 +43,9 @@ resource "aws_lb_listener" "mz_kafka_listener" {
 resource "aws_vpc_endpoint_service" "mz_kafka_lb_endpoint_service" {
   acceptance_required        = var.mz_acceptance_required
   network_load_balancer_arns = [aws_lb.mz_kafka_lb.arn]
+
+  supported_regions = var.mz_supported_regions
+
   tags = {
     Name = "mz-kafka-lb-endpoint-service"
   }
